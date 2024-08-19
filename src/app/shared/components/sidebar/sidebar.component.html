@@ -1,0 +1,53 @@
+<aside [class.collapsed]="isCollapsed">
+  <div class="header-nav"(click)="redirectToHome()">
+    <img [src]="logoUrl" alt="Logo" [height]="altura">
+  </div>
+  <button (click)="toggleSidebar()">
+    <span *ngIf="isCollapsed"><fa-icon [icon]="['fas', 'arrow-right']"></fa-icon></span>
+    <span *ngIf="!isCollapsed"><fa-icon [icon]="['fas', 'arrow-left']"></fa-icon></span>
+  </button>
+  <nav>
+    <ul>
+      <li>
+        <a (click)="toggleSubmenu('cadastros')">
+          <span class="icon" [title]="isCollapsed ? 'Cadastros' : ''"><fa-icon [icon]="['fas', 'user-plus']"></fa-icon></span>
+          <span *ngIf="!isCollapsed">Cadastros</span>
+        </a>
+        <ul *ngIf="submenus['cadastros']">
+          <li><a routerLink="/cadastros/viagens" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Viagens' : ''"><fa-icon [icon]="['fas', 'plane']"></fa-icon></span><span *ngIf="!isCollapsed"> Viagens</span></a></li>
+          <li><a routerLink="/cadastros/contratos" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Contratos' : ''"><fa-icon [icon]="['fas', 'file-contract']"></fa-icon></span><span *ngIf="!isCollapsed"> Contratos</span></a></li>
+          <li><a routerLink="/cadastros/produtos-servicos" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Produtos/Serviços' : ''"><fa-icon [icon]="['fas', 'box']"></fa-icon></span><span *ngIf="!isCollapsed"> Produtos/Serviços</span></a></li>
+          <li><a routerLink="/cadastros/pessoas" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Pessoas' : ''"><fa-icon [icon]="['fas', 'users']"></fa-icon></span><span *ngIf="!isCollapsed"> Pessoas</span></a></li>
+          <li><a routerLink="/cadastros/funcionarios" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Funcionários' : ''"><fa-icon [icon]="['fas', 'user-tie']"></fa-icon></span><span *ngIf="!isCollapsed"> Funcionários</span></a></li>
+          <li><a routerLink="/cadastros/categorias" routerLinkActive="active" (click)="togleCloseMenus('cadastros')"><span class="icon" [title]="isCollapsed ? 'Categorias' : ''"><fa-icon [icon]="['fas', 'tags']"></fa-icon></span><span *ngIf="!isCollapsed"> Categorias</span></a></li>
+        </ul>
+      </li>
+      <li>
+        <a (click)="toggleSubmenu('lancamentos')">
+          <span class="icon" [title]="isCollapsed ? 'Lançamentos' : ''"><fa-icon [icon]="['fas', 'file-alt']"></fa-icon></span>
+          <span *ngIf="!isCollapsed">Lançamentos</span>
+        </a>
+        <ul *ngIf="submenus['lancamentos']">
+          <li><a routerLink="/lancamentos/despesas-viagens"(click)="togleCloseMenus('lancamentos')"><span class="icon" [title]="isCollapsed ? 'Despesas com viagens' : ''"><fa-icon [icon]="['fas', 'money-bill-wave']"></fa-icon></span><span *ngIf="!isCollapsed"> Despesas com viagens</span></a></li>
+          <li><a routerLink="/lancamentos/medicoes" (click)="togleCloseMenus('lancamentos')"><span class="icon" [title]="isCollapsed ? 'Medições' : ''"><fa-icon [icon]="['fas', 'ruler']"></fa-icon></span><span *ngIf="!isCollapsed"> Medições</span></a></li>
+          <li><a routerLink="/lancamentos/contas-pagar-receber" (click)="togleCloseMenus('lancamentos')"><span class="icon" [title]="isCollapsed ? 'Contas a Pagar / Receber' : ''"><fa-icon [icon]="['fas', 'file-invoice-dollar']"></fa-icon></span><span *ngIf="!isCollapsed"> Contas a Pagar / Receber</span></a></li>
+          <li><a routerLink="/lancamentos/contas-correntes" (click)="togleCloseMenus('lancamentos')"><span class="icon" [title]="isCollapsed ? 'Contas Correntes' : ''"><fa-icon [icon]="['fas', 'university']"></fa-icon></span><span *ngIf="!isCollapsed"> Contas Corrente</span></a></li>
+        </ul>
+      </li>
+      <li>
+        <a (click)="toggleSubmenu('relatorios')">
+          <span class="icon" [title]="isCollapsed ? 'Relatórios' : ''"><fa-icon [icon]="['fas', 'chart-line']"></fa-icon></span>
+          <span *ngIf="!isCollapsed">Relatórios</span>
+        </a>
+        <ul *ngIf="submenus['relatorios']">
+          <li><a routerLink="/relatorios/relatorios-despesas-viagens" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'Despesas com viagens' : ''"><fa-icon [icon]="['fas', 'money-bill-wave']"></fa-icon></span><span *ngIf="!isCollapsed"> Despesas com viagens</span></a></li>
+          <li><a routerLink="/relatorios/relatorios-medicoes" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'Medições' : ''"><fa-icon [icon]="['fas', 'ruler']"></fa-icon></span><span *ngIf="!isCollapsed"> Medições</span></a></li>
+          <li><a routerLink="/relatorios/relatorios-contratos" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'Contratos' : ''"><fa-icon [icon]="['fas', 'file-contract']"></fa-icon></span><span *ngIf="!isCollapsed"> Contratos</span></a></li>
+          <li><a routerLink="/relatorios/relatorios-contas-pagar-receber" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'Contas a Pagar / Receber' : ''"><fa-icon [icon]="['fas', 'file-invoice-dollar']"></fa-icon></span><span *ngIf="!isCollapsed"> Contas a Pagar / Receber</span></a></li>
+          <li><a routerLink="/relatorios/relatorios-receber-status" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'A Receber com Status' : ''"><fa-icon [icon]="['fas', 'file-invoice']"></fa-icon></span><span *ngIf="!isCollapsed"> A Receber com Status</span></a></li>
+          <li><a routerLink="/relatorios/relatorios-contas-correntes" (click)="togleCloseMenus('relatorios')"><span class="icon" [title]="isCollapsed ? 'Contas Correntes' : ''"><fa-icon [icon]="['fas', 'university']"></fa-icon></span><span *ngIf="!isCollapsed"> Contas Correntes</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>

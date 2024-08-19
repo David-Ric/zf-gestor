@@ -1,0 +1,102 @@
+<div class="home-container">
+  <header>
+    <h2 class="title-containner">Dashboard</h2>
+  </header>
+<body>
+  <section class="demonstrativos">
+    <div class="card-dash">
+      <span class="title-card">Despesas com viagens</span>
+      <div class="container-dados">
+        <div class="dados">
+          <span class="desc">Valor do contrato</span>
+          <span class="valor">R$ 69.420,00</span>
+        </div>
+        <div class="dados">
+          <span class="desc">Valor</span>
+          <span class="valor-neg">R$ 40.493,56</span>
+        </div>
+      </div>
+      <div class="aba">
+        <span class="desc">Ref.: Agosto</span> <span class="ico" title="Valor maior que o mes anterior"><fa-icon [icon]="['fas', 'info-circle']"></fa-icon></span>
+      </div>
+    </div>
+    <div class="card-dash">
+      <span class="title-card">Medições</span>
+      <div class="container-dados">
+        <div class="dados">
+          <span class="desc">Medição</span>
+          <span class="valor">R$ 126.505,00</span>
+        </div>
+        <div class="dados">
+          <span class="desc">Despesas</span>
+          <span class="valor-neg">R$ 57.012,62</span>
+        </div>
+      </div>
+      <div class="aba">
+        <span class="desc">Ref.: Agosto</span> <span class="ico" title="Valor maior que o mes anterior"><fa-icon [icon]="['fas', 'info-circle']"></fa-icon></span>
+      </div>
+    </div>
+    <div class="card-dash">
+      <span class="title-card">Contas Pagar / Receber</span>
+      <div class="container-dados">
+        <div class="dados">
+          <span class="desc">A Pagar</span>
+          <span class="valor">R$ 2.625,00</span>
+        </div>
+        <div class="dados">
+          <span class="desc">A Receber</span>
+          <span class="valor">R$ 30.012,62</span>
+        </div>
+      </div>
+      <div class="aba">
+        <span class="desc">Ref.: Agosto</span> <span class="ico" title="Valor maior que o mes anterior"><fa-icon [icon]="['fas', 'info-circle']"></fa-icon></span>
+      </div>
+    </div>
+    <div class="card-dash">
+      <span class="title-card">Contratos</span>
+      <div class="container-dados">
+        <div class="dados">
+          <span class="valor">Total: R$ 2.4040.763,15</span>
+        </div>
+      </div>
+      <div class="aba">
+        <div class="dados">
+          <span class="dados2">Finalizados: R$ 834.320,45</span>
+          <span class="dados2">Em andamento: R$ 1.209.175,80</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="graficos">
+    <div class="card-tot" id="bar-chart">
+      <apx-chart
+        [series]="barChartOptions.series"
+        [chart]="barChartOptions.chart"
+        [xaxis]="barChartOptions.xaxis!"
+        [title]="barChartOptions.title"
+        [plotOptions]="barChartOptions.plotOptions!">
+      </apx-chart>
+    </div>
+  </section>
+  <section class="graficos">
+    <div class="card-sup" id="area-chart">
+      <apx-chart
+      [series]="areaChartOptions.series"
+      [chart]="areaChartOptions.chart"
+      [xaxis]="areaChartOptions.xaxis!"
+      [title]="areaChartOptions.title">
+      </apx-chart>
+    </div>
+    <div class="card-inf" id="pie-chart">
+      <apx-chart
+        [series]="pieChartOptions.series"
+        [chart]="pieChartOptions.chart"
+        [title]="pieChartOptions.title"
+        [labels]="pieChartOptions.labels!"
+        [responsive]="pieChartOptions.responsive!">
+      </apx-chart>
+    </div>
+  </section>
+</body>
+
+</div>

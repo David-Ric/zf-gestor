@@ -1,0 +1,26 @@
+<div *ngIf="!loading" class="body-login" >
+  <form class="login-container form" (ngSubmit)="login()">
+    <img class="logo-mob" src="../../../../assets/image/logo-zf-light.png" alt="Logo" height="50">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Senha</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Entrar</button>
+    <div class="recovery-password">
+      <a><span>Esqueci miha senha</span><span style="margin-left: 7px;"><fa-icon [icon]="['fas', 'info-circle']"></fa-icon></span></a>
+      <span>Versão:1.0</span>
+    </div>
+  </form>
+</div>
+<div *ngIf="loading" class="loading">
+  <img class="logo-mob" src="../../../../assets/image/logo-zf-light.png" alt="Logo" height="50">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" [style.width.%]="progress"></div>
+  </div>
+  <span>Carregando...</span>
+</div>
