@@ -11,10 +11,12 @@
 .main-content {
   flex-grow: 1;
   display: flex;
+  width: 98%;
   flex-direction: column;
-  margin-left: 50px;
+  padding-left: 50px;
   @media (max-width: 768px) {
-    margin-left: 0;
+    padding-left: 0;
+    width: 100%;
   }
 }
 
