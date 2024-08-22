@@ -1,6 +1,6 @@
 aside {
   width: 250px;
-  background-color: #29314c;
+  background-color: #00be9a;
   padding: 9px;
   transition: width 0.3s;
   min-height: 100vh;
@@ -37,7 +37,7 @@ aside {
     width: 30px;
     border-radius: 5px;
     border: 1px solid #fff;
-    background-color: #29314c;
+    background-color: #019379;
     right: -10px;
 
   }
@@ -65,7 +65,7 @@ aside {
   }
 
   nav ul li ul {
-    background-color: #6477b7;
+    background-color: #22ddbb;
     margin-top: 5px;
     list-style-type: none;
     padding: 10px;
@@ -81,9 +81,7 @@ aside {
     margin-right: 0.5rem;
   }
   a:hover{
-    color: #ffc600 !important;
+    color: #115a4d !important;
   }
-  @media (max-width: 768px) {
-    display: none;
-  }
+
 }

@@ -1,36 +1,70 @@
 .body-login{
-  width: 100vw;
-  height: 100vh;
-  background-color: #29314c;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  overflow: hidden;
+  font-family: Gotham-Book;
+  background-color: #1e1e2d;
   top: 0;
   position:fixed;
+  display: flex;
+  align-items: center;
 }
 .login-container {
   text-align: center;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
+  padding: 30px;
+  width: 400px;
+  height: auto;
+  margin:auto;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   color: #fff;
   .form-group{
     text-align: left;
     label{
+      font-size: 15px;
       margin-bottom: 5px;
+      color: #00be9a;
+      font-weight: bold;
+      margin-top: 10px;
     }
+
 
   }
 
   .logo-mob{
     margin-bottom: 40px;
   }
-
-  button{
+  .btn-login{
+    width: 100%;
+    background-color: #00be9a !important;
     margin-top: 20px;
-    width: 160px;
+    border: none;
+    position: relative;
+    padding: 5px 20px;
+    color: #fff;
+    height: 50px;
+    margin-top: 40px;
+    font-weight: 400px;
+    border-radius: 50px;
+    letter-spacing: 3px;
+  }
+  input{
+    height: 50px;
+    line-height: 60px;
+    color: #1e1e2d;
+    padding-left: 30px;
+    border-radius: 50px;
+    font-weight: 400;
+    background-color: #fff;
+  }
+  img {
+    height: 70px;
+    @media (max-width: 768px) {
+      margin-top: 60px;
+    }
   }
 
   @media (max-width: 768px) {
@@ -65,13 +99,14 @@
 .loading{
   width: 100vw;
   height: 100vh;
-  background-color: #29314c;
+  background-color: #1e1e2d;
   top: 0;
   position:fixed;
   text-align: center;
   align-items: center;
   padding-top: 160px;
-  color: #fff;
+  color: #00be9a;
+  font-size: 16px;
 
   .loading {
     text-align: center;
@@ -81,18 +116,18 @@
   .progress {
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 160px;
     background-color: #f3f3f3;
     border-radius: 20px;
     overflow: hidden;
     height: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .progress-bar {
     height: 100%;
-    background-color: #3498db;
+    background-color: #00be9a !important;
     transition: width 3s;
   }
 }

@@ -3,6 +3,7 @@ import {
   ApexAxisChartSeries,
   ApexChart,
   ApexXAxis,
+  ApexYAxis,
   ApexTitleSubtitle,
   ApexPlotOptions,
   ApexNonAxisChartSeries,
@@ -13,6 +14,7 @@ export type ChartOptions = {
   series: ApexAxisChartSeries | ApexNonAxisChartSeries;
   chart: ApexChart;
   xaxis?: ApexXAxis;
+  yaxis?:ApexYAxis;
   title: ApexTitleSubtitle;
   plotOptions?: ApexPlotOptions;
   responsive?: ApexResponsive[];
@@ -53,13 +55,28 @@ export class HomeComponent implements OnInit, OnDestroy {
       height: 350
     },
     title: {
-      text: 'Contas a Receber com Status'
+      text: 'Contas a Receber com Status',
+      style: {
+        color: '#00be9a'
+      }
     },
     xaxis: {
       categories: [
         'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
         'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-      ]
+      ],
+      labels: {
+        style: {
+          colors: '#00be9a'
+        }
+      }
+    },
+    yaxis: {
+      labels: {
+        style: {
+          colors: ['#00be9a'],
+        }
+      }
     },
     plotOptions: {
       bar: {
@@ -77,7 +94,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       height: 350
     },
     title: {
-      text: 'Medições'
+      text: 'Medições',
+      style: {
+        color: '#00be9a'
+      }
     },
     labels: ['Despesas', 'Impostos', 'Caução', 'Salários', 'Total Líquido'],
     responsive: [{
@@ -106,10 +126,18 @@ export class HomeComponent implements OnInit, OnDestroy {
       height: 350
     },
     title: {
-      text: 'Medições'
+      text: 'Medições',
+      style: {
+        color: '#00be9a'
+      }
     },
     xaxis: {
-      categories: ['Despesas', 'Impostos', 'Caução', 'Salários', 'Total Líquido']
+      categories: ['Despesas', 'Impostos', 'Caução', 'Salários', 'Total Líquido'],
+      labels: {
+        style: {
+          colors: '#00be9a'
+        }
+      }
     }
   };
 

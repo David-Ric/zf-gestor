@@ -11,7 +11,7 @@ export class SidebarComponent {
 
   @Input() minHeight: string = '0px';
   isCollapsed = true;
-  logoUrl: string = '../../../../assets/image/logo-zf-light-mini.png';
+  logoUrl: string = '../../../../assets/image/logo-zf-nav-min.png';
   altura:number = 20;
   submenus: { [key: string]: boolean } = {
     cadastros: false,
@@ -23,7 +23,7 @@ export class SidebarComponent {
 
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
-    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-light-mini.png' : '../../../../assets/image/logo-zf-light.png';
+    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
     this.altura = this.isCollapsed ?20 : 50;
   }
 
@@ -44,7 +44,7 @@ export class SidebarComponent {
     }
     this.submenus[menu] = !this.submenus[menu];
     this.isCollapsed = true;
-    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-light-mini.png' : '../../../../assets/image/logo-zf-light.png';
+    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
     this.altura = this.isCollapsed ?20 : 50;
   }
 

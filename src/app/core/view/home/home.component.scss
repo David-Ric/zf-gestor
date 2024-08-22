@@ -1,12 +1,18 @@
 .home-container{
+  body{
+    background-color: #1e1e2d;
+  }
   header{
-    border-bottom: 3px solid #a5a7ae;
+    border-bottom: 3px solid #00be9a;
     .title-containner{
       font-size: 30px;
     }
+    @media (max-width: 768px) {
+      text-align: center;
+    }
   }
   .demonstrativos{
-    background-color: #cadeef;
+    border-bottom: 3px solid #00be9a;
     display: flex;
     justify-content: space-between !important;
     align-items: center;
@@ -14,7 +20,6 @@
     justify-content: center;
     margin-top: 10px;
     .card-dash{
-      background-color: #122872;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,7 +32,7 @@
       margin: 10px;
 
       .title-card{
-        color: #ffff;
+        color: #00be9a;
         font-weight: bold;
         font-size: 16px;
       }
@@ -118,7 +123,7 @@
   width: 100%;
   margin-top: 10px;
   padding-top: 20px;
-  background-color: #cadeef;
+  border-bottom: 3px solid #00be9a;
   padding: 10px;
   .card-tot{
     width: 100%;
@@ -144,4 +149,5 @@
   @media (max-width: 768px) {
     flex-direction: column;
   }
+
 }

@@ -13,11 +13,12 @@
   flex-grow: 1;
   display: flex;
   width: 98%;
-
+  background-color: #1e1e2d;
   flex-direction: column;
   padding-left: 50px;
+  color: #00be9a;
   @media (max-width: 768px) {
-    padding-left: 0;
+    padding-left: 20px;
     width: 100%;
   }
 }
