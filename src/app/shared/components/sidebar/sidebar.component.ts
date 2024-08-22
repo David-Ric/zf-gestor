@@ -57,8 +57,9 @@ export class SidebarComponent {
 
   redirectToHome(){
     this.isCollapsed = true;
+    this.router.navigate(['/home']);
     setTimeout(() => {
-      this.isCollapsedText= !this.isCollapsedText;
+      this.isCollapsedText= true;
       this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
       this.altura = this.isCollapsed ?20 : 40;
     }, 100);
