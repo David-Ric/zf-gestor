@@ -1,8 +1,8 @@
 {
   "name": "zf-manutencao",
   "short_name": "zf-manutencao",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#1e1e2d",
+  "background_color": "#1e1e2d",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
