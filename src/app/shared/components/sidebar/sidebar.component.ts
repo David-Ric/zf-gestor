@@ -24,7 +24,7 @@ export class SidebarComponent {
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
     this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
-    this.altura = this.isCollapsed ?20 : 50;
+    this.altura = this.isCollapsed ?20 : 40;
   }
 
   toggleSubmenu(menu: string) {
@@ -45,7 +45,7 @@ export class SidebarComponent {
     this.submenus[menu] = !this.submenus[menu];
     this.isCollapsed = true;
     this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
-    this.altura = this.isCollapsed ?20 : 50;
+    this.altura = this.isCollapsed ?20 : 40;
   }
 
   redirectToHome(){
