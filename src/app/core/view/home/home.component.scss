@@ -1,16 +1,4 @@
-.home-container{
-  body{
-    background-color: #1e1e2d;
-  }
-  header{
-    border-bottom: 3px solid #00be9a;
-    .title-containner{
-      font-size: 30px;
-    }
-    @media (max-width: 768px) {
-      text-align: center;
-    }
-  }
+
   .demonstrativos{
     border-bottom: 3px solid #00be9a;
     display: flex;
@@ -98,7 +86,7 @@
       justify-content: center;
     }
   }
-}
+
 .card-red{
   background-color: brown;
 }
