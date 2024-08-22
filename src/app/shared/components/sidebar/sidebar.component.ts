@@ -49,7 +49,7 @@ export class SidebarComponent {
     this.submenus[menu] = !this.submenus[menu];
     this.isCollapsed = true;
     setTimeout(() => {
-      this.isCollapsedText= !this.isCollapsedText;
+      this.isCollapsedText= true;
       this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
       this.altura = this.isCollapsed ?20 : 40;
     }, 100);
