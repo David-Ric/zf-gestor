@@ -20,6 +20,7 @@ import { RelatoriosContasPagarReceberComponent } from './view/relatorios/relator
 import { RelatoriosReceberStatusComponent } from './view/relatorios/relatorios-receber-status/relatorios-receber-status.component';
 import { RelatoriosContasCorrentesComponent } from './view/relatorios/relatorios-contas-correntes/relatorios-contas-correntes.component';
 import { MenuMobileComponent } from '../shared/components/menu-mobile/menu-mobile.component';
+import { DespesasComViagensComponent } from './view/lancamentos/despesas-com-viagens/despesas-com-viagens.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -37,7 +38,7 @@ const routes: Routes = [
       { path: 'cadastros/produtos-servicos', component: ProdutosServicosComponent },
       { path: 'cadastros/viagens', component: ViagensComponent },
       // Rotas de Lançamentos
-      { path: 'lancamentos/despesas-viagens', component: ViagensComponent },
+      { path: 'lancamentos/despesas-viagens', component: DespesasComViagensComponent },
       { path: 'lancamentos/medicoes', component: MedicoesComponent },
       { path: 'lancamentos/contas-pagar-receber', component: ContasPagarReceberComponent },
       { path: 'lancamentos/contas-correntes', component: ContasCorrentesComponent },
