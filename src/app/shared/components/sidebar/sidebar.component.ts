@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { AppComponent } from './../../../app.component';
-import { Component, Input } from '@angular/core';
+import { Component, Input, isDevMode } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,6 +11,7 @@ export class SidebarComponent {
 
   @Input() minHeight: string = '0px';
   isCollapsed = true;
+  isCollapsedText = true;
   logoUrl: string = '../../../../assets/image/logo-zf-nav-min.png';
   altura:number = 20;
   submenus: { [key: string]: boolean } = {
@@ -23,8 +24,11 @@ export class SidebarComponent {
 
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
-    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
-    this.altura = this.isCollapsed ?20 : 40;
+    setTimeout(() => {
+      this.isCollapsedText= !this.isCollapsedText;
+      this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
+      this.altura = this.isCollapsed ?20 : 40;
+    }, 100);
   }
 
   toggleSubmenu(menu: string) {
@@ -44,11 +48,19 @@ export class SidebarComponent {
     }
     this.submenus[menu] = !this.submenus[menu];
     this.isCollapsed = true;
-    this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
-    this.altura = this.isCollapsed ?20 : 40;
+    setTimeout(() => {
+      this.isCollapsedText= !this.isCollapsedText;
+      this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
+      this.altura = this.isCollapsed ?20 : 40;
+    }, 100);
   }
 
   redirectToHome(){
-    this.router.navigate(['/home']);
+    this.isCollapsed = true;
+    setTimeout(() => {
+      this.isCollapsedText= !this.isCollapsedText;
+      this.logoUrl = this.isCollapsed ?'../../../../assets/image/logo-zf-nav-min.png' : '../../../../assets/image/logo-zf-nav.png';
+      this.altura = this.isCollapsed ?20 : 40;
+    }, 100);
   }
 }
