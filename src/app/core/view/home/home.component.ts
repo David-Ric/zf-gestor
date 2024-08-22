@@ -104,8 +104,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       breakpoint: 480,
       options: {
         chart: {
-          width: 250,
-          height: 250
+          width: 300,
+          height: 300 
         },
         legend: {
           position: 'bottom'
